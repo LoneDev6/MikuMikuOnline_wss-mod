@@ -1,8 +1,11 @@
 {
 	"connect":
 		{
-			"connecting": 		"接続中..",
-			"cancel":			"キャンセル"
+			"enter_server_address": "ホストアドレスを入力：",
+			"connect":              "接続",
+			"connecting": 		    "接続中..",
+			"cancel":			    "キャンセル",
+			"connection_lost":      "サーバーとの接続が切断されました"
 		},
 	"option":
 		{
@@ -44,5 +47,9 @@
 				{
 					"name":					"その他"
 				}
+		},
+	"game": 
+		{
+			"teleport_with_m_key": "\nＭキーで転送します"
 		}
 }

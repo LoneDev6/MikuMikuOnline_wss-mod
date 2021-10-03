@@ -207,7 +207,7 @@ void MainLoop::Draw()
 				label_.set_width(160);
 				auto text = _T("【") + unicode::ToTString(warp_point.name) + _T("】");
 				if (distance < 50) {
-					text += _T("\nＭキーで転送します");
+					text += _LT("game.teleport_with_m_key");
 					label_.set_bgcolor(UIBase::Color(255,0,0,150));
 				} else {
 					label_.set_bgcolor(UIBase::Color(0,0,0,150));
@@ -228,7 +228,7 @@ void MainLoop::Draw()
 		SetDrawBlendMode(DX_BLENDMODE_MUL, 120);
 		DrawBox(0,0,config_manager_->screen_width(),config_manager_->screen_height(),GetColor(0,0,0),1);
 		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
-		auto str = unicode::ToTString(_T("サーバーとの接続が切断されました"));
+		auto str = unicode::ToTString(_LT("connection.connection_lost"));
 		auto width = GetDrawStringWidthToHandle(str.c_str(),str.length(),ResourceManager::default_font_handle());
 		DrawStringToHandle(
 			config_manager_->screen_width() / 2 - width,

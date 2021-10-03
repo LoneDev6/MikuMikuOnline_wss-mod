@@ -1,8 +1,11 @@
 {
 	"connect":
 		{
-			"connecting": 		"Connecting..",
-			"cancel":			"Cancel"
+			"enter_server_address": "Enter server address: ",
+			"connect":              "Connect",
+			"connecting": 		    "Connecting..",
+			"cancel":			    "Cancel",
+			"connection_lost":      "Connection lost."
 		},
 	"option":
 		{
@@ -44,5 +47,9 @@
 				{
 					"name":					"Others"
 				}
+		},
+	"game": 
+		{
+			"teleport_with_m_key": "\nPress M to teleport."
 		}
 }

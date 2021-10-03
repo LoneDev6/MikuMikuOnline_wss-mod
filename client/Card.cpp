@@ -635,6 +635,19 @@ Handle<Value> Card::Function_Screen_player_focus(const Arguments& args)
     return Undefined();
 }
 
+Handle<Value> Card::Function_Game_translate(const Arguments& args)
+{
+    HandleScope handle;
+	auto self = static_cast<Card*>(Local<External>::Cast(args.Holder()->GetInternalField(0))->Value());
+	if (args.Length() >= 1) {
+
+		std::string str = *String::Utf8Value(args[0]->ToString());
+		return _LT(str);
+    }
+	
+    return Undefined();
+}
+
 Handle<Value> Card::Function_Model_Rebuild(const Arguments& args)
 {
     HandleScope handle;
@@ -1304,6 +1317,14 @@ void Card::SetFunctions()
      * @static
      */
     script_.SetFunction("Screen.player_focus", Function_Screen_player_focus);
+	
+    /**
+     * Get translated string by key from language file.
+     *
+     * @method player_focus
+     * @static
+     */
+    script_.SetFunction("Game.translate", Function_Game_translate);
 
 //    /**
 //     * ワールド座標をスクリーン座標に変換します
